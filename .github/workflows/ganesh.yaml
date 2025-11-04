@@ -23,24 +23,24 @@ jobs:
 
       - name: Deploy to Tomcat Server 1
         run: |
-          curl -v -u ${{ secrets.TOMCAT_HOST_1 }}:${{ secrets.TOMCAT_PASSWORD_1 }} \
+          curl -v -u ${{ secrets.TOMCAT_USER_1 }}:${{ secrets.TOMCAT_PASSWORD_1 }} \
           -T target/TrainBook-1.0.0-SNAPSHOT.war \
-          "http://${{ secrets.TOMCAT_USER_1 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
+          "http://${{ secrets.TOMCAT_HOST_1 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
 
       - name: Deploy to Tomcat Server 2
         run: |
-          curl -v -u ${{ secrets.TOMCAT_HOST_2 }}:${{ secrets.TOMCAT_PASSWORD_2 }} \
+          curl -v -u ${{ secrets.TOMCAT_USER_2 }}:${{ secrets.TOMCAT_PASSWORD_2 }} \
           -T target/TrainBook-1.0.0-SNAPSHOT.war \
-          "http://${{ secrets.TOMCAT_USER_2 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
+          "http://${{ secrets.TOMCAT_HOST_2 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
 
       - name: Deploy to Tomcat Server 3
         run: |
-          curl -v -u ${{ secrets.TOMCAT_HOST_3 }}:${{ secrets.TOMCAT_PASSWORD_3 }} \
+          curl -v -u ${{ secrets.TOMCAT_USER_3 }}:${{ secrets.TOMCAT_PASSWORD_3 }} \
           -T target/TrainBook-1.0.0-SNAPSHOT.war \
-          "http://${{ secrets.TOMCAT_USER_3 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
+          "http://${{ secrets.TOMCAT_HOST_3 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
 
       - name: Deploy to Tomcat Server 4
         run: |
-          curl -v -u ${{ secrets.TOMCAT_HOST_4 }}:${{ secrets.TOMCAT_PASSWORD_4 }} \
+          curl -v -u ${{ secrets.TOMCAT_USER_4 }}:${{ secrets.TOMCAT_PASSWORD_4 }} \
           -T target/TrainBook-1.0.0-SNAPSHOT.war \
-          "http://${{ secrets.TOMCAT_USER_4 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
+          "http://${{ secrets.TOMCAT_HOST_4 }}/manager/text/deploy?path=/TrainBook-1.0.0-SNAPSHOT&update=true"
